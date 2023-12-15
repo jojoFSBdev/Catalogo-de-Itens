@@ -1,0 +1,65 @@
+:root {
+    --cor-principal: #fc0fc0;
+    --cor-secundaria: #808000;
+}
+
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    height: 50px;
+}
+
+.div_catalogo {
+    display: grid;
+    grid-template-columns: 225px 225px 225px 225px 225px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.lbl_item {
+    border: 5px solid black;
+    width: 200px;
+    cursor: pointer;
+}
+
+.foto_item {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.div_novo_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_novo_item input, textarea {
+    width: 500px;
+}
+
+.div_novo_item button {
+    min-width: 50px;
+}
+
+
+.lbl_img_item {
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
