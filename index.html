@@ -6,6 +6,7 @@
     <title>Catalogo de Itens</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="script.js"></script>
 </head>
 <body>
@@ -16,30 +17,33 @@
         <a href="">Conta</a>
     </header>
     <main>
-        <div >
-            <div class = "div_novo_item" style="display: none;">
-                <label class = "lbl_img_item">
-                    Escolha uma Imagem
-                    <input id = "imgItem" class = "input_img_item" type="file" accept="image/*" style="display: none;">
-                </label>
-                
-                <input id = "title_item" type="text" placeholder="Titulo do Produto">
-                <textarea id = "desc_item"name="" cols="30" rows="10" placeholder = "Descrição do Produto...."></textarea>
-                <input id = "valor_item" type="number" placeholder="Valor em R$">
-                <div>
-                    <button onclick = "Cancelar()">Cancelar</button>
-                    <button onclick = "CatalogarItem()">Enviar</button>
+        <div class = "divGeral">
+            <div>
+                <div class = "div_novo_item" style="display: none;">
+                    <label class = "lbl_img_item">
+                        <img id = "imagemPreview"src="" >
+                        <i class = "bi bi-cloud-arrow-up"></i>
+                        <input id = "imgItem" class = "input_img_item" type="file" accept="image/*" style="display: none;">
+                    </label>
+            
+                    <input id = "title_item" type="text" placeholder="Titulo do Produto">
+                    <textarea id = "desc_item"name="" cols="30" rows="10" placeholder = "Descrição do Produto...."></textarea>
+                    <input id = "valor_item" type="number" placeholder="Valor em R$">
+                    <div>
+                        <button onclick = "Cancelar()">Cancelar</button>
+                        <button onclick = "CatalogarItem()">Enviar</button>
+                    </div>
                 </div>
+                <button class = "enviar" onclick="NovoItem()">Novo Item</button>
             </div>
-            <button class = "enviar" onclick="NovoItem()">Novo Item</button>
-        </div>
-        <div class = "div_catalogo">
-            <label class = "lbl_item" for="buttonExpandir" id = "lblItem1">
-                <img class = "foto_item" src="./RECURSOS/Tomada-Inteligente-Positivo-Smart-Plug-Wi-Fi.jpg" alt="Tomada Inteligente">
-                <h4>Tomada Inteligente</h4>
-                <p >R$ 150,00</p>
-                <input id = "buttonExpandir"type="button" value="1" style="display: none;" onclick="ExpandirItem()">
-            </label>
+            <div class = "div_catalogo">
+                <label class = "lbl_item" for="buttonExpandir" id = "lblItem1">
+                    <img class = "foto_item" src="./RECURSOS/Tomada-Inteligente-Positivo-Smart-Plug-Wi-Fi.jpg" alt="Tomada Inteligente">
+                    <h4>Tomada Inteligente</h4>
+                    <p >R$ 150,00</p>
+                    <input id = "buttonExpandir"type="button" value="1" style="display: none;" onclick="ExpandirItem()">
+                </label>
+            </div>
         </div>
     </main>
 </body>
